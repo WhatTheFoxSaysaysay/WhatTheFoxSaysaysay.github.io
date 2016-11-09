@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p id="jingdu"></p>
+		<p id="weidu"></p>
+	</body>
+	<script>
+		var jingdu = document.getElementById("jingdu");
+		var weidu = document.getElementById("weidu");
+		navigator.geolocation.getCurrentPosition(function(position) {
+			//do_something(position.coords.latitude, position.coords.longitude);
+			jingdu.innerHTML = position.coords.latitude;
+			weidu.innerHTML = position.coords.longitude;
+			
+		});
+	</script>
+
+</html>
